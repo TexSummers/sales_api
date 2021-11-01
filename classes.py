@@ -52,7 +52,6 @@ class Orders(db.Model):
         return {'id': self.id, 'customer_id': self.customer_id, 'products': self.products, 'total': self.total}
 
 
-# Unsure which parameters to include here....
 def add_order(customer_id, products, total):
     new_order = Orders(customer_id=customer_id, products=products, total=total)
     db.session.add(new_order)
